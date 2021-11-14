@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
     @staticmethod
     def parse(arg, id=" "):
         """
-        Returns a list concatinate the parsed arguments from the string
+        Returns a list conatning the parsed arguments from the string
         """
 
         arg_list = arg.split(id)
@@ -90,7 +90,7 @@ class HBNBCommand(cmd.Cmd):
         """
             prints Help info for the create function
         """
-        print("""Creates a new instance of the first argument
+        print("""Creats a new instance of the first argument
               stores it in the JSON file and prints its id""")
 
     def do_show(self, arg):
