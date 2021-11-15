@@ -12,8 +12,6 @@ import pep8
 import sys
 from os import environ, stat
 import unittest
-from unittest.mock import patch
-
 
 Place = models.Place
 State = models.State
@@ -43,20 +41,6 @@ class TestHBNBcmdDocs(unittest.TestCase):
     """Class for testing BaseModel docs"""
 
     @classmethod
-    def test_help_quit(self):
-        h = "Quit command to exit the program."
-        with patch("sys.stdout", new=StringIO()) as output:
-            self.assertFalse(HBNBCommand().onecmd("help quit"))
-            self.assertEqual(h, output.getvalue().strip())
-
-    def test_prompt_string(self):
-        self.assertEqual("(hbnb) ", HBNBCommand.prompt)
-
-    def test_empty_line(self):
-        with patch("sys.stdout", new=StringIO()) as output:
-            self.assertFalse(HBNBCommand().onecmd(""))
-            self.assertEqual("", output.getvalue().strip())
-
     def setUpClass(cls):
         """init: prints output to mark new tests"""
         print('\n\n.................................')
