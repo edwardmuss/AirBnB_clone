@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A command line interpreter for AirBnB clone
+A command line interpreter for AirBnB clone project
 """
 
 import cmd
@@ -90,7 +90,7 @@ class HBNBCommand(cmd.Cmd):
         """
             prints Help info for the create function
         """
-        print("""Creats a new instance of the first argument
+        print("""Creates a new instance of the first argument
               stores it in the JSON file and prints its id""")
 
     def do_show(self, arg):
